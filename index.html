@@ -6,6 +6,29 @@
   <title>Seguros Orquídeas</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: #fff;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+  </style>
 </head>
 <body>
   <header class="bg-light shadow-sm">
@@ -30,7 +53,7 @@
     <div class="container">
       <h2 class="text-center mb-4">Nuestros Seguros</h2>
       <div class="row text-center">
-        <div class="col-md-4">
+        <div class="col-md-4 mb-4">
           <div class="card service-card">
             <div class="card-body">
               <h5 class="card-title">SOAT</h5>
@@ -38,7 +61,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 mb-4">
           <div class="card service-card">
             <div class="card-body">
               <h5 class="card-title">Todo Riesgo</h5>
@@ -46,11 +69,35 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 mb-4">
           <div class="card service-card">
             <div class="card-body">
               <h5 class="card-title">Exequial</h5>
               <p class="card-text">Tranquilidad para ti y tu familia.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card service-card">
+            <div class="card-body">
+              <h5 class="card-title">Mascotas</h5>
+              <p class="card-text">Protección para tus amigos peludos.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card service-card">
+            <div class="card-body">
+              <h5 class="card-title">Hogar</h5>
+              <p class="card-text">Seguridad para lo más importante: tu casa.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card service-card">
+            <div class="card-body">
+              <h5 class="card-title">PYMES</h5>
+              <p class="card-text">Protección para tu negocio y tus sueños.</p>
             </div>
           </div>
         </div>
@@ -64,6 +111,10 @@
       <p class="mb-0">Estación de Servicio Las Orquídeas, Bogotá</p>
     </div>
   </footer>
+
+  <a href="https://wa.me/573185325404" target="_blank" class="whatsapp-float">
+    💬
+  </a>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
