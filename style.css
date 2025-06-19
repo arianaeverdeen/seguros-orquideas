@@ -1,4 +1,3 @@
-
 /* Fuentes de Google */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap');
 
@@ -100,6 +99,13 @@ footer p {
 
 .whatsapp-float:hover {
   transform: scale(1.1);
+}
+
+.content {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center; /* ✅ CENTRADO APLICADO */
 }
 
 /* Estilos responsive mínimos */
