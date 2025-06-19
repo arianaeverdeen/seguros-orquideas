@@ -1,30 +1,118 @@
+
+/* Fuentes de Google */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap');
+
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #F5F5F5;
+  color: #212121;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Poppins', sans-serif;
+  color: #155D27;
+}
+
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+nav a {
+  font-weight: 600;
+  color: #155D27;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #25D366;
+}
+
+.hero {
+  background: linear-gradient(to right, #155D27, #25D366);
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn-success, .btn-wsp {
+  background-color: #25D366;
+  border: none;
+  font-weight: bold;
+}
+
+.btn-success:hover, .btn-wsp:hover {
+  background-color: #1eb95c;
+}
+
+.service-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+footer {
+  background-color: #155D27;
+  color: white;
+}
+
+footer p {
   margin: 0;
 }
-.hero {
-  background: url('https://images.unsplash.com/photo-1588776814546-fb4f84f9fbc6') no-repeat center center/cover;
-  height: 100vh;
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
 }
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1;
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
 }
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
-.service-card {
-  border: none;
-  transition: transform 0.3s;
-}
-.service-card:hover {
-  transform: scale(1.05);
+
+/* Estilos responsive mínimos */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
 }
