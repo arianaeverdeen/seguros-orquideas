@@ -1,93 +1,89 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Seguros Orquídeas</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="bg-light shadow-sm">
-    <div class="container d-flex justify-content-between align-items-center py-3">
-      <h1 class="h4 m-0">Seguros Orquídeas</h1>
-      <nav>
-        <a href="#servicios" class="me-3">Seguros</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-    </div>
-  </header>
 
-  <section class="hero">
-    <div class="container hero-content text-white text-center">
-      <h2 class="display-4 fw-bold">Seguros para tu vehículo, tu hogar… y tu tranquilidad.</h2>
-      <p class="lead mt-3">Confianza, cercanía y experiencia a tu servicio.</p>
+  <!-- Navbar móvil responsiva -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-success" href="#">Seguros Orquídeas</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="menuNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#servicios">Seguros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero d-flex align-items-center justify-content-center text-white text-center" style="background: linear-gradient(to right, #155D27, #25D366); min-height: 60vh;">
+    <div class="container">
+      <h2 class="fw-bold fs-2">Seguros para tu vehículo, tu hogar… y tu tranquilidad.</h2>
+      <p class="lead fs-5 mt-3">Confianza, cercanía y experiencia a tu servicio.</p>
       <a href="#contacto" class="btn btn-success btn-lg mt-4">Cotiza tu seguro</a>
     </div>
   </section>
 
+  <!-- Servicios -->
   <section class="py-5" id="servicios">
     <div class="container">
       <h2 class="text-center mb-4">Nuestros Seguros</h2>
-      <div class="row text-center">
-        <div class="col-md-4 mb-4">
+      <div class="row gy-4 text-center">
+        <div class="col-md-4">
           <a href="soat.html" class="text-decoration-none text-dark">
-            <div class="card service-card">
-              <div class="card-body">
-                <h5 class="card-title">SOAT</h5>
-                <p class="card-text">Tu seguro obligatorio fácil y rápido.</p>
-              </div>
+            <div class="card service-card h-100 rounded-4 p-3">
+              <h5 class="card-title">SOAT</h5>
+              <p class="card-text">Tu seguro obligatorio fácil y rápido.</p>
             </div>
           </a>
         </div>
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4">
           <a href="todo-riesgo.html" class="text-decoration-none text-dark">
-            <div class="card service-card">
-              <div class="card-body">
-                <h5 class="card-title">Todo Riesgo</h5>
-                <p class="card-text">Protección completa para tu vehículo.</p>
-              </div>
+            <div class="card service-card h-100 rounded-4 p-3">
+              <h5 class="card-title">Todo Riesgo</h5>
+              <p class="card-text">Protección completa para tu vehículo.</p>
             </div>
           </a>
         </div>
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4">
           <a href="exequial.html" class="text-decoration-none text-dark">
-            <div class="card service-card">
-              <div class="card-body">
-                <h5 class="card-title">Exequial</h5>
-                <p class="card-text">Tranquilidad para ti y tu familia.</p>
-              </div>
+            <div class="card service-card h-100 rounded-4 p-3">
+              <h5 class="card-title">Exequial</h5>
+              <p class="card-text">Tranquilidad para ti y tu familia.</p>
             </div>
           </a>
         </div>
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4">
           <a href="mascotas.html" class="text-decoration-none text-dark">
-            <div class="card service-card">
-              <div class="card-body">
-                <h5 class="card-title">Mascotas</h5>
-                <p class="card-text">Protección para tus amigos peludos.</p>
-              </div>
+            <div class="card service-card h-100 rounded-4 p-3">
+              <h5 class="card-title">Mascotas</h5>
+              <p class="card-text">Protección para tus amigos peludos.</p>
             </div>
           </a>
         </div>
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4">
           <a href="hogar.html" class="text-decoration-none text-dark">
-            <div class="card service-card">
-              <div class="card-body">
-                <h5 class="card-title">Hogar</h5>
-                <p class="card-text">Seguridad para lo más importante: tu casa.</p>
-              </div>
+            <div class="card service-card h-100 rounded-4 p-3">
+              <h5 class="card-title">Hogar</h5>
+              <p class="card-text">Seguridad para lo más importante: tu casa.</p>
             </div>
           </a>
         </div>
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4">
           <a href="pymes.html" class="text-decoration-none text-dark">
-            <div class="card service-card">
-              <div class="card-body">
-                <h5 class="card-title">PYMES</h5>
-                <p class="card-text">Protección para tu negocio y tus sueños.</p>
-              </div>
+            <div class="card service-card h-100 rounded-4 p-3">
+              <h5 class="card-title">PYMES</h5>
+              <p class="card-text">Protección para tu negocio y tus sueños.</p>
             </div>
           </a>
         </div>
@@ -95,14 +91,18 @@
     </div>
   </section>
 
-  <footer class="bg-primary text-white text-center py-3" id="contacto">
+  <!-- Footer -->
+  <footer class="bg-primary text-white text-center py-4" id="contacto">
     <div class="container">
       <p class="mb-1">Contáctanos por WhatsApp: <strong>+57 318 5325404</strong></p>
       <p class="mb-0">Estación de Servicio Las Orquídeas, Bogotá</p>
     </div>
   </footer>
 
-  <a href="https://wa.me/573185325404" target="_blank" class="whatsapp-float">💬</a>
+  <!-- Botón WhatsApp flotante -->
+  <a href="https://wa.me/573185325404" target="_blank" class="whatsapp-float" style="bottom: 15px;">
+    💬
+  </a>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
