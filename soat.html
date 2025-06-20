@@ -16,11 +16,14 @@
         max-height: 42px;
       }
     }
+    .banner-text {
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    }
   </style>
 </head>
 <body>
 
-  <!-- Navbar uniforme con index -->
+  <!-- Navbar uniforme -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
     <div class="container">
       <a class="navbar-brand" href="index.html">
@@ -38,12 +41,12 @@
     </div>
   </nav>
 
-  <!-- Banner con nuevo texto -->
+  <!-- Banner con mejoras visuales -->
   <section class="hero" style="background: url('img/soat-banner.jpg') no-repeat center center/cover; height: 400px; position: relative;">
     <div style="background-color: rgba(0,0,0,0.5); position: absolute; inset: 0;"></div>
-    <div class="container text-white text-center" style="position: relative; z-index: 2; padding-top: 100px;">
-      <h1 class="fw-bold fs-3 d-none d-md-block">Protege a quienes más quieres</h1>
-      <p class="fs-5">Con el SOAT que te responde cuando lo necesitas</p>
+    <div class="container text-white text-center" style="position: relative; z-index: 2; padding-top: 140px; padding-bottom: 60px;">
+      <h1 class="fw-bold fs-3 d-none d-md-block banner-text">Protege a quienes más quieres</h1>
+      <p class="fs-5 banner-text">Con el SOAT que te responde cuando lo necesitas</p>
     </div>
   </section>
 
