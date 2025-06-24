@@ -4,17 +4,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Autos | Seguros Orquídeas</title>
+  <title>AUTOS - Seguros Orquídeas</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css">
   <style>
     .navbar-brand img {
       max-height: 48px;
+      height: auto;
     }
     @media (max-width: 576px) {
       .navbar-brand img {
         max-height: 42px;
       }
+    }
+    .banner-text {
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+    }
+    .section-title {
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      color: #ffffff;
+      border-bottom: 3px solid #ffffff;
+      display: inline-block;
+      padding-bottom: 6px;
+      margin-bottom: 20px;
     }
     .hero .container {
       display: flex;
@@ -22,20 +37,11 @@
       align-items: center;
       justify-content: center;
       height: 100%;
-      color: white;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-color: rgba(0,0,0,0.45);
     }
   </style>
 </head>
 <body>
 
-  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
     <div class="container">
       <a class="navbar-brand" href="index.html">
@@ -53,27 +59,32 @@
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="hero position-relative" style="background: url('img/todo-riesgo-banner.jpg') no-repeat center center/cover; height: 400px;">
-    <div class="container text-center position-relative" style="z-index: 2;">
-      <h2 class="text-uppercase text-white mb-2">AUTOS</h2>
-      <h1 class="display-5 fw-bold text-white">Protege a quien más quieres</h1>
-      <p class="lead mt-2">Tu seguro de auto con respaldo completo, atención inmediata y el mejor acompañamiento.</p>
-      <a href="index.html#contacto" class="btn btn-success btn-lg mt-3">Solicita tu cotización</a>
+  <section class="hero" style="background: url('img/banner-autos.jpg') no-repeat center center/cover; height: 400px; position: relative;">
+    <div style="background-color: rgba(0,0,0,0.5); position: absolute; inset: 0;"></div>
+    <div class="container text-white text-center" style="position: relative; z-index: 2;">
+      <div class="section-title">AUTOS</div>
+      <h1 class="fw-bold fs-3 d-none d-md-block banner-text" style="color: #fff;">Protege a quien más quieres</h1>
+      <p class="fs-5 banner-text">Tu seguro de auto con respaldo completo, atención inmediata y el mejor acompañamiento.</p>
     </div>
   </section>
 
-  <!-- Beneficios -->
-  <section class="py-5 bg-light">
-    <div class="container">
-      <h2 class="text-center mb-4">¿Por qué elegir nuestro seguro de Autos?</h2>
-      <p class="text-center mb-4">Con Seguros Orquídeas accedes a las mejores aseguradoras del país. Compara beneficios y elige el plan que mejor se ajuste a tus necesidades.</p>
-      <p class="text-center">Te acompañamos en todo momento: desde la cotización hasta la reclamación. Servicio cálido, humano y 100% confiable.</p>
+  <section class="content text-center">
+    <h2 class="mb-4">¿Qué incluye?</h2>
+    <p>El seguro para autos te brinda protección integral en caso de accidentes, robos, daños a terceros y más. Contamos con las mejores compañías aseguradoras del país.</p>
+
+    <h3 class="mt-5">Beneficios:</h3>
+    <ul class="list-unstyled text-start mx-auto" style="max-width: 600px;">
+      <li class="mb-2">✔️ Asistencia vial 24/7 y vehículo de reemplazo.</li>
+      <li class="mb-2">✔️ Cobertura por daños materiales y lesiones a terceros.</li>
+      <li class="mb-2">✔️ Acompañamiento personalizado en todo el proceso.</li>
+    </ul>
+
+    <div class="text-center mt-5">
+      <a href="https://wa.me/573185325404?text=Hola,%20quiero%20cotizar%20mi%20seguro%20de%20auto" class="btn btn-lg btn-wsp">Cotiza tu seguro</a>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-primary text-white text-center py-3" id="contacto">
+  <footer class="bg-primary text-white text-center py-3 mt-5" id="contacto">
     <div class="container">
       <p class="mb-1">Contáctanos por WhatsApp: <strong>+57 318 5325404</strong></p>
       <p class="mb-0">Estación de Servicio Las Orquídeas, Bogotá</p>
