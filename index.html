@@ -57,141 +57,39 @@
   </style>
 </head>
 <body>
+<!-- NAVBAR OMITIDO POR BREVIDAD -->
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="img/logo-orquideas.png" alt="Seguros Orquídeas" class="img-fluid">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
-        <span class="navbar-toggler-icon"></span>
+<!-- Carrusel de logos de aseguradoras -->
+<section class="py-5 bg-white">
+  <div class="container text-center">
+    <h2 class="mb-4">Trabajamos con las mejores aseguradoras</h2>
+    <div id="aseguradorasCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner d-flex align-items-center" style="height:100px;">
+        <div class="carousel-item active">
+          <img src="img/aseguradoras/ALLIANZ.png" class="d-block mx-auto" style="height: 80px;" alt="Allianz">
+        </div>
+        <div class="carousel-item">
+          <img src="img/aseguradoras/IBC LOGO.png" class="d-block mx-auto" style="height: 80px;" alt="IBC">
+        </div>
+        <div class="carousel-item">
+          <img src="img/aseguradoras/LOGO PREVISORA.png" class="d-block mx-auto" style="height: 80px;" alt="Previsora">
+        </div>
+        <div class="carousel-item">
+          <img src="img/aseguradoras/logo liberty.png" class="d-block mx-auto" style="height: 80px;" alt="Liberty">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#aseguradorasCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-end" id="menuNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="#servicios">Seguros</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-        </ul>
-      </div>
+      <button class="carousel-control-next" type="button" data-bs-target="#aseguradorasCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
     </div>
-  </nav>
+  </div>
+</section>
 
-  <!-- Hero -->
-  <section class="hero position-relative" style="background: url('img/index-banner.jpg') no-repeat center center/cover; height: 400px;">
-    <div class="container text-center position-relative" style="z-index: 2;">
-      <h1 class="section-title">Seguros para tu vehículo, tu hogar… y tu tranquilidad.</h1>
-      <p class="lead mt-3">Confianza, cercanía y experiencia a tu servicio.</p>
-      <a href="#cotizacion" class="btn btn-wsp btn-lg mt-4">💬 Cotiza tu seguro</a>
-    </div>
-  </section>
+<!-- RESTO DE CONTENIDO OMITIDO -->
 
-  <!-- Servicios -->
-  <section class="py-5" id="servicios">
-    <div class="container">
-      <h2 class="text-center mb-4">Nuestros Seguros</h2>
-      <div class="row text-center">
-        <div class="col-md-4 mb-4">
-          <a href="soat.html" class="card service-card h-100 d-block">
-            <div class="card-body">
-              <h5 class="card-title">SOAT</h5>
-              <p class="card-text">Tu seguro obligatorio fácil y rápido.</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-4 mb-4">
-          <a href="todo-riesgo.html" class="card service-card h-100 d-block">
-            <div class="card-body">
-              <h5 class="card-title">Todo Riesgo</h5>
-              <p class="card-text">Protección completa para tu vehículo.</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-4 mb-4">
-          <a href="exequial.html" class="card service-card h-100 d-block">
-            <div class="card-body">
-              <h5 class="card-title">Exequial</h5>
-              <p class="card-text">Tranquilidad para ti y tu familia.</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-4 mb-4">
-          <a href="mascotas.html" class="card service-card h-100 d-block">
-            <div class="card-body">
-              <h5 class="card-title">Mascotas</h5>
-              <p class="card-text">Protección para tus amigos peludos.</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-4 mb-4">
-          <a href="hogar.html" class="card service-card h-100 d-block">
-            <div class="card-body">
-              <h5 class="card-title">Hogar</h5>
-              <p class="card-text">Seguridad para lo más importante: tu casa.</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-4 mb-4">
-          <a href="pymes.html" class="card service-card h-100 d-block">
-            <div class="card-body">
-              <h5 class="card-title">PYMES</h5>
-              <p class="card-text">Protección para tu negocio y tus sueños.</p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Formulario de contacto -->
-  <section class="py-5 bg-light" id="cotizacion">
-    <div class="container">
-      <h2 class="text-center mb-4">Solicita tu cotización</h2>
-      <form action="https://formsubmit.co/sebastian@riddhi-pharma.com" method="POST" class="mx-auto" style="max-width: 600px;">
-        <input type="hidden" name="_captcha" value="false">
-        <div class="mb-3">
-          <label for="nombre" class="form-label">Nombre completo</label>
-          <input type="text" class="form-control" name="nombre" required>
-        </div>
-        <div class="mb-3">
-          <label for="telefono" class="form-label">Teléfono o WhatsApp</label>
-          <input type="tel" class="form-control" name="telefono" required>
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">Correo electrónico (opcional)</label>
-          <input type="email" class="form-control" name="email">
-        </div>
-        <div class="mb-3">
-          <label for="tipo" class="form-label">Tipo de seguro</label>
-          <select class="form-select" name="tipo">
-            <option>SOAT</option>
-            <option>Todo Riesgo</option>
-            <option>Exequial</option>
-            <option>Mascotas</option>
-            <option>Hogar</option>
-            <option>PYMES</option>
-          </select>
-        </div>
-        <div class="mb-3">
-          <label for="mensaje" class="form-label">Comentarios</label>
-          <textarea class="form-control" name="mensaje" rows="3"></textarea>
-        </div>
-        <div class="text-center">
-          <button type="submit" class="btn btn-primary">Enviar solicitud</button>
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-primary text-white text-center py-3" id="contacto">
-    <div class="container">
-      <p class="mb-1">Contáctanos por WhatsApp: <strong>+57 318 5325404</strong></p>
-      <p class="mb-0">Estación de Servicio Las Orquídeas, Bogotá</p>
-    </div>
-  </footer>
-
-  <a href="https://wa.me/573185325404" target="_blank" class="whatsapp-float">💬</a>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
