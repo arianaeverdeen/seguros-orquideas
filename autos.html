@@ -1,89 +1,84 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Autos | Seguros Orquídeas</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
   <style>
-    .hero {
-      position: relative;
-      height: 360px;
-      background: url('img/banner-autos.jpg') no-repeat center center/cover;
+    .navbar-brand img {
+      max-height: 48px;
+    }
+    @media (max-width: 576px) {
+      .navbar-brand img {
+        max-height: 42px;
+      }
+    }
+    .hero .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      color: white;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
     }
     .hero::before {
       content: "";
       position: absolute;
       inset: 0;
-      background-color: rgba(0, 0, 0, 0.45);
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      color: white;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: bold;
-    }
-    .btn-primary {
-      background-color: #25D366;
-      border: none;
-    }
-    .btn-primary:hover {
-      background-color: #1da955;
+      background-color: rgba(0,0,0,0.45);
     }
   </style>
 </head>
 <body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo-orquideas.png" alt="Seguros Orquídeas" class="img-fluid">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="menuNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html#servicios">Seguros</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
   <!-- Hero -->
-  <section class="hero">
-    <div class="container hero-content">
-      <h1 class="mb-2">AUTOS</h1>
-      <h2 class="mb-3">Protege a quien más quieres</h2>
-      <p class="lead">Tu seguro de auto con respaldo completo, atención inmediata y el mejor acompañamiento.</p>
-      <a href="index.html#contacto" class="btn btn-primary btn-lg mt-3">Solicita tu cotización</a>
+  <section class="hero position-relative" style="background: url('img/todo-riesgo-banner.jpg') no-repeat center center/cover; height: 400px;">
+    <div class="container text-center position-relative" style="z-index: 2;">
+      <h2 class="text-uppercase text-white mb-2">AUTOS</h2>
+      <h1 class="display-5 fw-bold text-white">Protege a quien más quieres</h1>
+      <p class="lead mt-2">Tu seguro de auto con respaldo completo, atención inmediata y el mejor acompañamiento.</p>
+      <a href="index.html#contacto" class="btn btn-success btn-lg mt-3">Solicita tu cotización</a>
     </div>
   </section>
 
-  <!-- Información -->
+  <!-- Beneficios -->
   <section class="py-5 bg-light">
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-10 text-center">
-          <h3 class="mb-4">¿Por qué elegir nuestro seguro de Autos?</h3>
-          <p class="mb-3">
-            Con Seguros Orquídeas accedes a las mejores aseguradoras del país. Compara beneficios y elige el plan
-            que mejor se ajuste a tus necesidades.
-          </p>
-          <p>
-            Te acompañamos en todo momento: desde la cotización hasta la reclamación. Servicio cálido, humano y 100%
-            confiable.
-          </p>
-        </div>
-      </div>
+      <h2 class="text-center mb-4">¿Por qué elegir nuestro seguro de Autos?</h2>
+      <p class="text-center mb-4">Con Seguros Orquídeas accedes a las mejores aseguradoras del país. Compara beneficios y elige el plan que mejor se ajuste a tus necesidades.</p>
+      <p class="text-center">Te acompañamos en todo momento: desde la cotización hasta la reclamación. Servicio cálido, humano y 100% confiable.</p>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-primary text-white text-center py-3">
+  <footer class="bg-primary text-white text-center py-3" id="contacto">
     <div class="container">
       <p class="mb-1">Contáctanos por WhatsApp: <strong>+57 318 5325404</strong></p>
       <p class="mb-0">Estación de Servicio Las Orquídeas, Bogotá</p>
     </div>
   </footer>
-
-  <a href="https://wa.me/573185325404" target="_blank" class="whatsapp-float">
-    💬
-  </a>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
