@@ -6,78 +6,210 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Seguros Orquídeas</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
   <style>
-    .navbar-brand img { max-height: 48px; height: auto; }
-    .hero .container {
-      display: flex; flex-direction: column; align-items: center;
-      justify-content: center; height: 100%; color: white;
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .hero {
+      background: url('img/index-banner.jpg') no-repeat center center/cover;
+      height: 400px;
+      color: white;
       text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
-    .hero::before {
-      content: ""; position: absolute; inset: 0;
-      background-color: rgba(0,0,0,0.45);
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #126c2d;
     }
-    .section-title { font-weight: 700; font-size: 2.25rem; }
-    .carousel-inner { display: flex; justify-content: center; align-items: center; gap: 40px; }
-    .carousel-inner img { max-height: 60px; object-fit: contain; }
-    iframe { width: 100%; height: 300px; border: none; }
+    .btn-wsp {
+      background-color: #25D366;
+      color: white;
+      border: none;
+    }
+    .btn-wsp:hover {
+      background-color: #1eb75c;
+    }
+    .carousel-item img {
+      max-height: 80px;
+      object-fit: contain;
+    }
+    footer {
+      background-color: #212529;
+      color: white;
+    }
+    footer a {
+      color: #ffffff;
+    }
+    footer img {
+      max-height: 32px;
+    }
   </style>
 </head>
 <body>
 
-<!-- Carrusel -->
-<section class="bg-light py-5">
-  <div class="container text-center">
-    <h2 class="mb-4">Trabajamos con las mejores aseguradoras</h2>
-    <div class="d-flex justify-content-center align-items-center flex-wrap gap-4">
-      <img src="img/aseguradoras/ALLIANZ.png" alt="Allianz" style="height: 60px;">
-      <img src="img/aseguradoras/IBC LOGO.png" alt="IBC" style="height: 60px;">
-      <img src="img/aseguradoras/LOGO PREVISORA.png" alt="Previsora" style="height: 60px;">
-      <img src="img/aseguradoras/logo liberty.png" alt="Liberty" style="height: 60px;">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="img/logo-orquideas.png" alt="Seguros Orquídeas" style="max-height:48px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="menuNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#servicios">Seguros</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="#ubicacion">Ubicación</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div>
+    <h1>Seguros para tu vehículo, tu hogar… y tu tranquilidad.</h1>
+    <p>Confianza, cercanía y experiencia a tu servicio.</p>
+    <a href="#contacto" class="btn btn-wsp mt-3">💬 Cotiza tu seguro</a>
+  </div>
+</section>
+
+<!-- Servicios -->
+<section class="py-5" id="servicios">
+  <div class="container">
+    <h2 class="text-center mb-4">Nuestros Seguros</h2>
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <a href="soat.html" class="card h-100 d-block p-4">
+          <h5>SOAT</h5><p>Tu seguro obligatorio fácil y rápido.</p>
+        </a>
+      </div>
+      <div class="col-md-4 mb-4">
+        <a href="autos.html" class="card h-100 d-block p-4">
+          <h5>Autos</h5><p>Protección completa para tu vehículo.</p>
+        </a>
+      </div>
+      <div class="col-md-4 mb-4">
+        <a href="exequial.html" class="card h-100 d-block p-4">
+          <h5>Exequial</h5><p>Tranquilidad para ti y tu familia.</p>
+        </a>
+      </div>
+      <div class="col-md-4 mb-4">
+        <a href="mascotas.html" class="card h-100 d-block p-4">
+          <h5>Mascotas</h5><p>Protección para tus amigos peludos.</p>
+        </a>
+      </div>
+      <div class="col-md-4 mb-4">
+        <a href="hogar.html" class="card h-100 d-block p-4">
+          <h5>Hogar</h5><p>Seguridad para lo más importante: tu casa.</p>
+        </a>
+      </div>
+      <div class="col-md-4 mb-4">
+        <a href="pymes.html" class="card h-100 d-block p-4">
+          <h5>PYMES</h5><p>Protección para tu negocio y tus sueños.</p>
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Encuéntranos -->
-<section class="py-5 bg-light">
+<!-- Carrusel Aseguradoras -->
+<section class="bg-light py-5">
   <div class="container text-center">
-    <h2 class="mb-4">Encuéntranos</h2>
-    
+    <h3 class="mb-4">Trabajamos con las mejores aseguradoras</h3>
+    <div class="d-flex justify-content-center flex-wrap align-items-center gap-4">
+      <img src="img/aseguradoras/ALLIANZ.png" alt="Allianz" height="60">
+      <img src="img/aseguradoras/IBC LOGO.png" alt="IBC" height="60">
+      <img src="img/aseguradoras/LOGO PREVISORA.png" alt="Previsora" height="60">
+      <img src="img/aseguradoras/logo liberty.png" alt="Liberty" height="60">
+    </div>
+  </div>
+</section>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.661206012891!2d-74.0935652!3d4.6506213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9aa246553cf5%3A0x2c527104328d5a08!2sEDS%20Las%20Orqu%C3%ADdeas!5e0!3m2!1ses-419!2sco!4v1719344747164!5m2!1ses-419!2sco"
-  width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<!-- Formulario de contacto -->
+<section class="py-5 bg-light" id="contacto">
+  <div class="container">
+    <h2 class="text-center mb-4">Solicita tu cotización</h2>
+    <form action="https://formsubmit.co/discomseguros@gmail.com" method="POST" class="mx-auto" style="max-width: 600px;">
+      <input type="hidden" name="_captcha" value="false">
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre completo</label>
+        <input type="text" class="form-control" name="nombre" required>
+      </div>
+      <div class="mb-3">
+        <label for="telefono" class="form-label">Teléfono o WhatsApp</label>
+        <input type="tel" class="form-control" name="telefono" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Correo electrónico (opcional)</label>
+        <input type="email" class="form-control" name="email">
+      </div>
+      <div class="mb-3">
+        <label for="tipo" class="form-label">Tipo de seguro</label>
+        <select class="form-select" name="tipo">
+          <option>SOAT</option>
+          <option>Autos</option>
+          <option>Exequial</option>
+          <option>Mascotas</option>
+          <option>Hogar</option>
+          <option>PYMES</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="mensaje" class="form-label">Comentarios</label>
+        <textarea class="form-control" name="mensaje" rows="3"></textarea>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary">Enviar solicitud</button>
+      </div>
+    </form>
+  </div>
+</section>
 
-
+<!-- Ubicación -->
+<section class="py-5" id="ubicacion">
+  <div class="container">
+    <h2 class="text-center mb-4">Encuéntranos</h2>
+    <div class="d-flex justify-content-center">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.3495409638626!2d-74.14183602481492!3d4.709203295265831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f834cdcfd82c3%3A0xea31974a1f48a42f!2seds%20orquideas!5e0!3m2!1sen!2sco!4v1750857466631!5m2!1sen!2sco" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
   </div>
 </section>
 
 <!-- Footer -->
-<footer class="bg-dark text-white pt-4">
+<footer class="pt-4 pb-2">
   <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <h5>Mapa del sitio</h5>
+    <div class="row text-center text-md-start">
+      <div class="col-md-4 mb-3">
+        <h6>Mapa del sitio</h6>
         <ul class="list-unstyled">
-          <li><a href="#" class="text-white text-decoration-underline">Inicio</a></li>
-          <li><a href="#servicios" class="text-white text-decoration-underline">Seguros</a></li>
-          <li><a href="#contacto" class="text-white text-decoration-underline">Contacto</a></li>
-          <li><a href="#ubicacion" class="text-white text-decoration-underline">Ubicación</a></li>
+          <li><a href="#hero">Inicio</a></li>
+          <li><a href="#servicios">Seguros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#ubicacion">Ubicación</a></li>
         </ul>
       </div>
-      <div class="col-md-4">
-        <h5>Contáctanos</h5>
-        <p>Email: <a href="mailto:discomseguros@gmail.com" class="text-white">discomseguros@gmail.com</a></p>
+      <div class="col-md-4 mb-3">
+        <h6>Contáctanos</h6>
+        <p>Email: <a href="mailto:discomseguros@gmail.com">discomseguros@gmail.com</a></p>
         <p>WhatsApp: +57 318 5325404</p>
       </div>
-      <div class="col-md-4 text-center">
-        <h5>Síguenos</h5>
-        <a href="https://www.instagram.com/segurosorquideas" target="_blank">
-          <img src="img/logo-orquideas.png" alt="Instagram" style="height: 40px;">
+      <div class="col-md-4 mb-3 text-center">
+        <h6>Síguenos</h6>
+        <a href="https://www.instagram.com/segurosorquideas/" target="_blank">
+          <img src="img/logo-orquideas.png" alt="Instagram" height="32">
         </a>
       </div>
     </div>
-    <div class="text-center mt-3 pb-3">
-      <p class="mb-0">Copyright © 2025. Todos los derechos reservados | Seguros Orquídeas</p>
+    <div class="text-center mt-3">
+      <small>Copyright © 2025. Todos los derechos reservados | Seguros Orquídeas</small>
     </div>
   </div>
 </footer>
