@@ -71,6 +71,95 @@
 <section class="content text-center">
 <h2 class="mb-4">¿Qué cubre?</h2>
 <p>El SOAT (Seguro Obligatorio de Accidentes de Tránsito) es una póliza que cubre los gastos médicos de todas las personas involucradas en un accidente de tránsito, sin importar quién sea el culpable.</p>
+
+<section class="container py-5" id="cotizador-soat">
+<h2 class="text-center mb-4">Cotiza tu SOAT</h2>
+<form class="row justify-content-center g-3">
+<div class="col-md-4">
+<label class="form-label" for="clase">Clase de Vehículo</label>
+<select class="form-select" id="clase" onchange="actualizarSubtipos()">
+<option disabled="" selected="">Selecciona una clase</option>
+</select>
+</div>
+<div class="col-md-4">
+<label class="form-label" for="subtipo">Subtipo / Cilindraje</label>
+<select class="form-select" id="subtipo" onchange="cotizar()">
+<option disabled="" selected="">Selecciona un subtipo</option>
+</select>
+</div>
+<div class="col-md-4">
+<label class="form-label" for="edad">Edad del Vehículo</label>
+<select class="form-select" id="edad" onchange="cotizar()">
+<option disabled="" selected="">Selecciona una edad</option>
+</select>
+</div>
+</form>
+<div class="text-center mt-4">
+<h4 class="text-success" id="precio-soat"></h4>
+</div>
+</section>
+<script>
+const tarifasSOAT = {};
+
+function actualizarSubtipos() {
+  const clase = document.getElementById("clase").value;
+  const subtipoSelect = document.getElementById("subtipo");
+  subtipoSelect.innerHTML = '<option selected disabled>Selecciona un subtipo</option>';
+
+  if (tarifasSOAT[clase]) {
+    const subtipos = Object.keys(tarifasSOAT[clase]);
+    subtipos.forEach(sub => {
+      const opt = document.createElement("option");
+      opt.value = sub;
+      opt.innerText = sub;
+      subtipoSelect.appendChild(opt);
+    });
+  }
+  cotizar();
+}
+
+function cotizar() {
+  const clase = document.getElementById("clase").value;
+  const subtipo = document.getElementById("subtipo").value;
+  const edad = document.getElementById("edad").value;
+  const precio = tarifasSOAT?.[clase]?.[subtipo]?.[edad];
+
+  const precioSpan = document.getElementById("precio-soat");
+  if (precio) {
+    precioSpan.innerText = "Tarifa: $" + precio.toLocaleString("es-CO");
+  } else {
+    precioSpan.innerText = "";
+  }
+}
+
+window.onload = function() {
+  fetch("tarifas-soat.json")
+    .then(r => r.json())
+    .then(data => {
+      Object.assign(tarifasSOAT, data);
+      const claseSelect = document.getElementById("clase");
+      Object.keys(data).forEach(clase => {
+        const opt = document.createElement("option");
+        opt.value = clase;
+        opt.innerText = clase;
+        claseSelect.appendChild(opt);
+      });
+      const edades = new Set();
+      Object.values(data).forEach(grupo => {
+        Object.values(grupo).forEach(subgrupo => {
+          Object.keys(subgrupo).forEach(edad => edades.add(edad));
+        });
+      });
+      const edadSelect = document.getElementById("edad");
+      Array.from(edades).forEach(ed => {
+        const opt = document.createElement("option");
+        opt.value = ed;
+        opt.innerText = ed;
+        edadSelect.appendChild(opt);
+      });
+    });
+}
+</script>
 <h3 class="mt-5">Beneficios:</h3>
 <ul class="list-unstyled text-start mx-auto" style="max-width: 600px;">
 <li class="mb-2">✔️ Cobertura inmediata en clínicas y hospitales.</li>
@@ -82,42 +171,38 @@
 </div>
 </section>
 <!-- Footer -->
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 <!-- Footer -->
 <footer class="pt-4 pb-3 bg-dark text-white">
-  <div class="container">
-    <div class="row text-center text-md-start">
-      <div class="col-12 col-md-4 mb-3">
-        <h6>Mapa del sitio</h6>
-        <ul class="list-unstyled">
-          <li><a href="index.html" class="text-white">Inicio</a></li>
-          <li><a href="index.html#servicios" class="text-white">Seguros</a></li>
-          <li><a href="index.html#contacto" class="text-white">Contacto</a></li>
-          <li><a href="index.html#ubicacion" class="text-white">Ubicación</a></li>
-        </ul>
-      </div>
-      <div class="col-12 col-md-4 mb-3">
-        <h6>Contáctanos</h6>
-        <p>Email: <a href="mailto:discomseguros@gmail.com" class="text-white">discomseguros@gmail.com</a><br>WhatsApp: +57 318 5325404</p>
-      </div>
-      <div class="col-12 col-md-4 mb-3 text-center">
-        <h6>Síguenos</h6>
-        <a href="https://www.instagram.com/segurosorquideas/" target="_blank">
-          <img src="img/logo-orquideas.png" alt="Instagram" style="max-height: 48px;">
-        </a>
-      </div>
-    </div>
-    <div class="text-center mt-3">
-      <small>Copyright © 2025. Todos los derechos reservados | Seguros Orquídeas</small>
-    </div>
-  </div>
-</footer>
-
-<a href="https://wa.me/573185325404" target="_blank" class="position-fixed bottom-0 end-0 m-4" style="z-index:999;">
-  <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" style="width: 60px; height: 60px;">
+<div class="container">
+<div class="row text-center text-md-start">
+<div class="col-12 col-md-4 mb-3">
+<h6>Mapa del sitio</h6>
+<ul class="list-unstyled">
+<li><a class="text-white" href="index.html">Inicio</a></li>
+<li><a class="text-white" href="index.html#servicios">Seguros</a></li>
+<li><a class="text-white" href="index.html#contacto">Contacto</a></li>
+<li><a class="text-white" href="index.html#ubicacion">Ubicación</a></li>
+</ul>
+</div>
+<div class="col-12 col-md-4 mb-3">
+<h6>Contáctanos</h6>
+<p>Email: <a class="text-white" href="mailto:discomseguros@gmail.com">discomseguros@gmail.com</a><br/>WhatsApp: +57 318 5325404</p>
+</div>
+<div class="col-12 col-md-4 mb-3 text-center">
+<h6>Síguenos</h6>
+<a href="https://www.instagram.com/segurosorquideas/" target="_blank">
+<img alt="Instagram" src="img/logo-orquideas.png" style="max-height: 48px;"/>
 </a>
-
+</div>
+</div>
+<div class="text-center mt-3">
+<small>Copyright © 2025. Todos los derechos reservados | Seguros Orquídeas</small>
+</div>
+</div>
+</footer>
+<a class="position-fixed bottom-0 end-0 m-4" href="https://wa.me/573185325404" style="z-index:999;" target="_blank">
+<img alt="WhatsApp" src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" style="width: 60px; height: 60px;"/>
+</a>
 </body>
 </html>
