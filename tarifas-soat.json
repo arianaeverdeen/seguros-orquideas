@@ -1,0 +1,53 @@
+{
+  "CAMPEROS Y CAMIONETAS": {
+    "Menos de 1500 c.c.": {
+      "0 a 9 años": 829900,
+      "10 años o mas": 989500
+    },
+    "1500 a 2500": {
+      "0 a 9 años": 983100,
+      "10 años o mas": 1157100
+    },
+    "Más de 2500 c.c.": {
+      "0 a 9 años": 1146200,
+      "10 años o mas": 1309300
+    }
+  },
+  "AUTOS FAMILIARES": {
+    "Menos de 1500 c.c.": {
+      "0 a 9 años": 485600,
+      "10 años o mas": 630700
+    },
+    "1500 a 2500": {
+      "0 a 9 años": 582700,
+      "10 años o mas": 715000
+    },
+    "Más de 2500 c.c.": {
+      "0 a 9 años": 673800,
+      "10 años o mas": 791600
+    }
+  },
+  "VEHICULOS PARA SEIS O MAS PASAJEROS": {
+    "Menos de 2500": {
+      "0 a 9 años": 834400,
+      "10 años o mas": 1053900
+    },
+    "2500 o más": {
+      "0 a 9 años": 1103300,
+      "10 años o mas": 1316700
+    }
+  },
+  "AUTOS DE NEGOCIOS Y TAXIS": {
+    "Menos de 1500 c.c.": {
+      "0 a 9 años": 318200,
+      "10 años o mas": 384800
+    },
+    "1500 a 2500": {
+      "0 a 9 años": 383000,
+      "10 años o mas": 461200
+    },
+    "Más de 2500 c.c.": {
+      "0 a 9 años": 479300
+    }
+  }
+}
