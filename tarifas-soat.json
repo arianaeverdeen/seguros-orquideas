@@ -1,4 +1,24 @@
 {
+  "MOTOS": {
+    "Ciclomotor": {
+      "nan": 168200
+    },
+    "Menos de 100 c.c.": {
+      "nan": 293700
+    },
+    "De 100 a 200 c.c.": {
+      "nan": 376600
+    },
+    "Más de 200 c.c.": {
+      "nan": 808600
+    },
+    "Motocarros, tricimoto, cuadriciclos": {
+      "nan": 418100
+    },
+    "Motocarro 5 pasajeros": {
+      "nan": 418100
+    }
+  },
   "CAMPEROS Y CAMIONETAS": {
     "Menos de 1500 c.c.": {
       "0 a 9 años": 829900,
@@ -11,6 +31,28 @@
     "Más de 2500 c.c.": {
       "0 a 9 años": 1146200,
       "10 años o mas": 1309300
+    }
+  },
+  "CARGA O MIXTO": {
+    "Menos de 5 toneladas": {
+      "nan": 925000
+    },
+    "De 5 a 15 toneladas": {
+      "nan": 1317900
+    },
+    "Más de 15 toneladas": {
+      "nan": 1655800
+    }
+  },
+  "OFICIALES ESPECIALES": {
+    "Menos de 1500 c.c.": {
+      "nan": 1035800
+    },
+    "1500 a 2500": {
+      "nan": 1295400
+    },
+    "Más de 2500 c.c.": {
+      "nan": 1545000
     }
   },
   "AUTOS FAMILIARES": {
@@ -48,6 +90,19 @@
     },
     "Más de 2500 c.c.": {
       "0 a 9 años": 479300
+    }
+  },
+  "SERVICIO PUBLICO URBANO": {
+    "BUSES Y BUSETAS": {
+      "nan": 680300
+    }
+  },
+  "SERVICIO PUBLICO INTERMUNICIPAL": {
+    "MENOS DE 10 PASAJEROS": {
+      "nan": 683000
+    },
+    "10 O MAS PASAJEROS": {
+      "nan": 968000
     }
   }
 }
