@@ -126,9 +126,10 @@ function actualizarSubtipos() {
     });
   }
 
-  // Siempre mostrar campo de edad al cambiar clase
-  document.getElementById("edad").parentElement.style.display = "block";
+  // Reiniciar
   document.getElementById("precio-soat").innerText = "";
+  document.getElementById("edad").selectedIndex = 0;
+  document.getElementById("edad").parentElement.style.display = "none";
 }
 
 function cotizar() {
@@ -147,8 +148,9 @@ function cotizar() {
     return;
   }
 
-  const edades = Object.keys(data);
-  if (edades.length === 1 && (edades[0] === '' || edades[0].toLowerCase().includes('única'))) {
+  const tieneEdades = Object.keys(data).some(e => e && e.trim() !== "");
+
+  if (!tieneEdades) {
     edadContainer.style.display = "none";
     const unicoValor = Object.values(data)[0];
     precioSpan.innerText = "Tarifa: $" + unicoValor.toLocaleString("es-CO");
@@ -179,7 +181,11 @@ window.onload = function() {
       const edades = new Set();
       Object.values(data).forEach(grupo => {
         Object.values(grupo).forEach(subgrupo => {
-          Object.keys(subgrupo).forEach(edad => edades.add(edad));
+          Object.keys(subgrupo).forEach(edad => {
+            if (edad && edad.trim() !== "") {
+              edades.add(edad);
+            }
+          });
         });
       });
 
